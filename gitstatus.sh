@@ -131,4 +131,6 @@ for w in "$branch" "$remote" $num_staged $num_conflicts $num_changed $num_untrac
   echo "$w"
 done
 
+echo "${ResetColor}"
+
 exit

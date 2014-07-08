@@ -28,14 +28,14 @@ function git_prompt_config()
   ResetColor="\[\033[0m\]"            # Text reset
 
   # Bold
-  local BoldGreen="\[\033[1;32m\]"    # Green
-  local BoldBlue="\[\033[1;34m\]"     # Blue
+  local BoldGreen="\[\033[0;32m\]"    # Green
+  local BoldBlue="\[\033[0;34m\]"     # Blue
 
   # High Intensty
   local IntenseBlack="\[\033[0;90m\]" # Grey
 
   # Bold High Intensty
-  local Magenta="\[\033[1;35m\]"      # Purple
+  local Magenta="\[\033[0;35m\]"      # Purple
 
   # Regular Colors
   local Yellow="\[\033[0;33m\]"
