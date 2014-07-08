@@ -19,7 +19,7 @@ set BGreen (set_color -o green)         # Green
 set IBlack (set_color -o black)         # Black
 
 # Bold High Intensty
-set Magenta (set_color -o purple)       # Purple
+set Magenta (set_color purple)       # Purple
 
 # Default values for the appearance of the prompt. Configure at will.
 set GIT_PROMPT_PREFIX "["

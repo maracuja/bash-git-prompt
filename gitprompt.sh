@@ -35,7 +35,7 @@ function git_prompt_config()
   local IntenseBlack="\[\033[0;90m\]" # Grey
 
   # Bold High Intensty
-  local Magenta="\[\033[1;95m\]"      # Purple
+  local Magenta="\[\033[1;35m\]"      # Purple
 
   # Regular Colors
   local Yellow="\[\033[0;33m\]"
