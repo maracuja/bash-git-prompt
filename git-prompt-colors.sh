@@ -21,7 +21,12 @@ GIT_PROMPT_CLEAN="${BoldGreen}o"      # a colored flag indicating a "clean" repo
 GIT_PROMPT_COMMAND_OK="${Green}o"    # indicator if the last command returned with an exit code of 0
 GIT_PROMPT_COMMAND_FAIL="${Red}x"   # indicator if the last command returned with an exit code of other than 0
 
-GIT_PROMPT_START_USER="${Magenta}${UserName} ${White}at ${Yellow}${HostName} ${White}in ${Green}${PathShort}${ResetColor} on"
+local DockerPrompt=""
+if [[ "$DOCKER_MACHINE_NAME" != "" ]]; then
+    DockerPrompt="\ndocker: ${Cyan}🐳  $DOCKER_MACHINE_NAME ${ResetColor}"
+fi
+
+GIT_PROMPT_START_USER="\nsession: ${Yellow}${UserName}@${HostName} ${White}\ndir: ${Green}${PathShort}${ResetColor} ${DockerPrompt} \nbranch:"
 GIT_PROMPT_START_ROOT=GIT_PROMPT_START_USER
 GIT_PROMPT_END_USER=" \n${White}~ 🍔 ${ResetColor} "
 GIT_PROMPT_END_ROOT=GIT_PROMPT_END_USER
@@ -30,3 +35,4 @@ GIT_PROMPT_END_ROOT=GIT_PROMPT_END_USER
 GIT_PROMPT_SYMBOLS_AHEAD="↑·"         # The symbol for "n versions ahead of origin"
 GIT_PROMPT_SYMBOLS_BEHIND="↓·"        # The symbol for "n versions behind of origin"
 GIT_PROMPT_SYMBOLS_PREHASH=":"        # Written before hash of commit, if no name could be found
+
